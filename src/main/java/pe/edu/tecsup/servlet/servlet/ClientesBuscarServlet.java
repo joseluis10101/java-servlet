@@ -3,7 +3,6 @@ package pe.edu.tecsup.servlet.servlet;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -43,7 +42,7 @@ public class ClientesBuscarServlet extends HttpServlet {
 //                .collect(Collectors.toList());
 
         req.setAttribute("CLIENTES_REGISTRADOS", clientesBuscados);
-        RequestDispatcher disp = req.getRequestDispatcher("/busqueda.jsp");
+        RequestDispatcher disp = req.getRequestDispatcher("/jsp/busqueda.jsp");
         disp.forward(req, resp);
 
     }
